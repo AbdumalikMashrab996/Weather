@@ -43,7 +43,7 @@ const max = document.querySelector('.max')
 const overlay = document.querySelector('.overlay')
 
 const api = {
-  key: '467143a2e9e1de3de89328bf80dd0625',
+  key: '3a76a1f234ec623bfd927f0c9ac88e0e',
   base: 'https://api.openweathermap.org/data/2.5/',
 }
 
