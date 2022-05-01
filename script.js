@@ -8,7 +8,7 @@
 // const overlay = document.querySelector('.overlay')
 // // api key
 // const api = {
-//   key: '467143a2e9e1de3de89328bf80dd0625',
+//   key: '3a76a1f234ec623bfd927f0c9ac88e0e',
 //   base: 'https://api.openweathermap.org/data/2.5/',
 // }
 
@@ -29,8 +29,8 @@
 //   cityName.textContent = `${data.name}, ${data.sys.country}`
 //   currentDegree.textContent = `${Math.round(data.main.temp)}℃`
 //   currentWeather.textContent = `${data.weather[0].main}`
-//   max.textContent = `${Math.round(data.main.temp_max)}℃`
 //   min.textContent = `${Math.round(data.main.temp_min)}℃`
+//   max.textContent = `${Math.round(data.main.temp_max)}℃`
 // }
 
 const form = document.querySelector('.form')
@@ -56,8 +56,8 @@ form.addEventListener('submit', async (e)=> {
   )
 
   const data = await fetchData.json()
-    getWeather(data)
-    overlay.classList.add('hidden')
+  getWeather(data)
+  overlay.classList.add('hidden')
 })
 
 function getWeather(data) {
@@ -65,4 +65,5 @@ function getWeather(data) {
   currentDegree.textContent = `${Math.round(data.main.temp)}℃`
   currentWeather.textContent = `${data.weather[0].main}`
   min.textContent = `${Math.round(data.main.temp_min)}℃`
+  max.textContent = `${Math.round(data.main.temp_max)}℃`
 }
